@@ -96,7 +96,4 @@ Data tidak tersimpan pada server atau database. Penyimpanan LocalStorage berlaku
 
 Proyek ini menerapkan struktur HTML semantik, pengaturan tampilan menggunakan CSS, manipulasi DOM, validasi formulir, interaksi pengguna, dan pengelolaan data menggunakan JavaScript.
 
-## Pengumpulan Tugas
 
-- Repository GitHub: [Masukkan URL repository]
-- Video penjelasan YouTube: [Masukkan URL video](https://youtu.be/Gd9f-IjCwg4)
