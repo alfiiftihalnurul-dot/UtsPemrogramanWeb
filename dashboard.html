@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | BookSpace</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-mark">B</span> BookSpace</a>
+      <p class="nav-label">MENU UTAMA</p>
+      <nav class="nav-menu">
+        <a class="nav-link active" href="dashboard.html">▦ <span>Dashboard</span></a>
+        <a class="nav-link" href="stok.html">▤ <span>Stok / Katalog</span></a>
+        <a class="nav-link" href="checkout.html">＋ <span>Pemesanan</span></a>
+        <a class="nav-link" href="tracking.html">⌖ <span>Tracking Pengiriman</span></a>
+      </nav>
+      <p class="nav-label nav-label-bottom">RIWAYAT</p>
+      <a class="nav-link" href="checkout.html#orderHistory">◷ <span>Laporan & Transaksi</span></a>
+      <button class="nav-link logout-button" id="logoutBtn">↪ <span>Keluar</span></button>
+      <div class="sidebar-note"><strong>Temukan cerita baru.</strong><p>Setiap buku membuka jendela pengetahuan.</p></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div><p class="eyebrow">BOOKSPACE / OVERVIEW</p><h1>Dashboard</h1></div>
+        <div class="profile-chip"><span class="avatar">A</span><span>Admin BookSpace</span></div>
+      </header>
+      <section class="welcome-panel">
+        <div><p class="eyebrow light">RUANG BACA DIGITAL ANDA</p><h2 id="greeting">Selamat datang!</h2><p>Kelola katalog, pesanan, dan pengiriman buku dari satu tempat.</p></div>
+        <div class="welcome-icon">✦</div>
+      </section>
+      <section class="section-heading"><div><p class="eyebrow">RINGKASAN</p><h2>Aktivitas toko</h2></div><span class="date-label" id="todayDate"></span></section>
+      <section class="stats-grid">
+        <article class="stat-card"><span class="stat-icon lavender">▤</span><p>Total judul buku</p><strong id="totalBooks">0</strong><small>Judul tersedia di katalog</small></article>
+        <article class="stat-card"><span class="stat-icon peach">▣</span><p>Total stok</p><strong id="totalStock">0</strong><small>Eksemplar siap dijual</small></article>
+        <article class="stat-card"><span class="stat-icon mint">⌑</span><p>Total transaksi</p><strong id="totalOrders">0</strong><small>Pesanan tersimpan di perangkat</small></article>
+      </section>
+      <section class="section-heading"><div><p class="eyebrow">AKSES CEPAT</p><h2>Jelajahi menu</h2></div></section>
+      <section class="quick-grid">
+        <a class="quick-card" href="stok.html"><span>▤</span><div><h3>Informasi Stok / Katalog</h3><p>Lihat dan tambah data buku.</p></div><b>→</b></a>
+        <a class="quick-card" href="tracking.html"><span>⌖</span><div><h3>Tracking Pengiriman</h3><p>Cek status paket pelanggan.</p></div><b>→</b></a>
+        <a class="quick-card" href="checkout.html#orderHistory"><span>▥</span><div><h3>Laporan Pemesanan</h3><p>Lihat daftar pesanan.</p></div><b>→</b></a>
+        <a class="quick-card" href="checkout.html#orderHistory"><span>◷</span><div><h3>History Transaksi</h3><p>Periksa transaksi tersimpan.</p></div><b>→</b></a>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stok Buku | BookSpace</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-mark">B</span> BookSpace</a>
+      <p class="nav-label">MENU UTAMA</p>
+      <nav class="nav-menu">
+        <a class="nav-link" href="dashboard.html">▦ <span>Dashboard</span></a>
+        <a class="nav-link active" href="stok.html">▤ <span>Stok / Katalog</span></a>
+        <a class="nav-link" href="checkout.html">＋ <span>Pemesanan</span></a>
+        <a class="nav-link" href="tracking.html">⌖ <span>Tracking Pengiriman</span></a>
+      </nav>
+      <p class="nav-label nav-label-bottom">RIWAYAT</p>
+      <a class="nav-link" href="checkout.html#orderHistory">◷ <span>Laporan & Transaksi</span></a>
+      <a class="nav-link" href="login.html">↪ <span>Keluar</span></a>
+      <div class="sidebar-note"><strong>BookSpace</strong><p>Kelola koleksi buku Anda.</p></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">BOOKSPACE / INVENTORY</p><h1>Stok & Katalog Buku</h1></div><a class="btn btn-outline" href="dashboard.html">← Dashboard</a></header>
+      <section class="page-intro"><div><h2>Daftar koleksi</h2><p class="muted">Data katalog menggunakan dataKatalogBuku dari file data.js yang diberikan dosen.</p></div><button class="btn btn-primary" id="showBookForm">＋ Tambah Buku</button></section>
+      <form id="bookForm" class="panel form-grid hidden">
+        <div><label for="bookTitle">Kode barang</label><input id="bookTitle" required placeholder="Contoh: Bumi"></div>
+        <div><label for="bookAuthor">Nama barang / judul buku</label><input id="bookAuthor" required placeholder="Nama penulis"></div>
+        <div><label for="bookCategory">Jenis barang</label><select id="bookCategory"><option>Buku Ajar</option><option>Buku Referensi</option><option>Buku Umum</option></select></div>
+        <div><label for="bookPrice">Harga (Rp)</label><input id="bookPrice" type="number" min="1" required placeholder="85000"></div>
+        <div><label for="bookStock">Jumlah stok</label><input id="bookStock" type="number" min="0" required placeholder="10"></div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Simpan Buku</button><button class="btn btn-outline" type="button" id="cancelBookForm">Batal</button></div>
+      </form>
+      <section class="panel">
+        <div class="table-toolbar"><div><h3>Data inventaris</h3><p class="muted" id="catalogCount">0 buku</p></div><input id="catalogSearch" class="search-input" placeholder="Cari judul atau penulis..."></div>
+        <div class="table-wrap"><table><thead><tr><th>No.</th><th>Cover</th><th>Kode Barang</th><th>Nama Barang</th><th>Jenis</th><th>Edisi</th><th>Harga</th><th>Stok</th></tr></thead><tbody id="catalogTable"></tbody></table></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

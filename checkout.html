@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan | BookSpace</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-mark">B</span> BookSpace</a>
+      <p class="nav-label">MENU UTAMA</p>
+      <nav class="nav-menu">
+        <a class="nav-link" href="dashboard.html">▦ <span>Dashboard</span></a>
+        <a class="nav-link" href="stok.html">▤ <span>Stok / Katalog</span></a>
+        <a class="nav-link active" href="checkout.html">＋ <span>Pemesanan</span></a>
+        <a class="nav-link" href="tracking.html">⌖ <span>Tracking Pengiriman</span></a>
+      </nav>
+      <p class="nav-label nav-label-bottom">RIWAYAT</p>
+      <a class="nav-link" href="#orderHistory">◷ <span>Laporan & Transaksi</span></a>
+      <a class="nav-link" href="login.html">↪ <span>Keluar</span></a>
+      <div class="sidebar-note"><strong>BookSpace</strong><p>Pesan buku dengan mudah.</p></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">BOOKSPACE / CHECKOUT</p><h1>Pemesanan Buku</h1></div><a class="btn btn-outline" href="dashboard.html">← Dashboard</a></header>
+      <section class="page-intro"><div><h2>Buat pesanan baru</h2><p class="muted">Isi informasi pemesan, pilih buku, lalu simpan pesanan.</p></div></section>
+      <div class="checkout-layout">
+        <form id="checkoutForm" class="panel form-stack">
+          <h3>Informasi pemesan</h3>
+          <label for="customerName">Nama lengkap</label><input id="customerName" required placeholder="Nama pemesan">
+          <label for="customerEmail">Email</label><input id="customerEmail" type="email" required placeholder="nama@email.com">
+          <label for="customerPhone">Nomor telepon</label><input id="customerPhone" type="tel" required placeholder="08xxxxxxxxxx">
+          <label for="customerAddress">Alamat pengiriman</label><textarea id="customerAddress" rows="3" required placeholder="Alamat lengkap"></textarea>
+          <div class="divider"></div><h3>Detail pesanan</h3>
+          <label for="orderBook">Pilih buku</label><select id="orderBook" required></select>
+          <div class="form-grid two">
+            <div><label for="orderQty">Jumlah</label><input id="orderQty" type="number" min="1" value="1" required></div>
+            <div><label for="paymentMethod">Pembayaran</label><select id="paymentMethod"><option>Transfer Bank</option><option>COD</option><option>E-Wallet</option></select></div>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">Simpan Pesanan</button>
+          <p class="form-note">Pesanan disimpan pada localStorage browser sebagai simulasi database.</p>
+        </form>
+        <aside class="panel order-summary"><p class="eyebrow">RINGKASAN</p><h3>Pesanan Anda</h3><div class="summary-row"><span>Buku</span><strong id="summaryBook">Belum dipilih</strong></div><div class="summary-row"><span>Jumlah</span><strong id="summaryQty">1</strong></div><div class="summary-row"><span>Harga satuan</span><strong id="summaryPrice">Rp0</strong></div><div class="divider"></div><div class="summary-total"><span>Total pembayaran</span><strong id="summaryTotal">Rp0</strong></div></aside>
+      </div>
+      <section class="panel history-panel" id="orderHistory"><div class="table-toolbar"><div><h3>Laporan & History Transaksi</h3><p class="muted">Daftar pesanan yang sudah disimpan.</p></div></div><div class="table-wrap"><table><thead><tr><th>No. DO</th><th>Pemesan</th><th>Buku</th><th>Total</th><th>Pembayaran</th><th>Status</th></tr></thead><tbody id="ordersTable"></tbody></table></div></section>
+    </main>
+  </div>
+</body>
+</html>

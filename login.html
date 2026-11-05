@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | BookSpace</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <a class="brand brand-center" href="login.html"><span class="brand-mark">B</span> BookSpace</a>
+    <p class="eyebrow">SELAMAT DATANG KEMBALI</p>
+    <h1>Masuk ke akun Anda</h1>
+    <p class="muted">Kelola pesanan dan temukan bacaan favorit Anda.</p>
+    <form id="loginForm" class="form-stack">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="nama@email.com" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Masukkan password" required>
+      <button class="btn btn-primary btn-full" type="submit">Login</button>
+    </form>
+    <div class="auth-links">
+      <button class="text-button" data-modal="forgotModal">Lupa Password?</button>
+      <span>Belum punya akun? <button class="text-button" data-modal="registerModal">Daftar</button></span>
+    </div>
+    <p class="demo-hint">Akun demo: rina@gmail.com / rina123, agus@gmail.com / agus123, siti@gmail.com / siti123</p>
+  </main>
+
+  <dialog id="forgotModal" class="modal">
+    <form method="dialog" class="modal-content">
+      <button class="modal-close" aria-label="Tutup">×</button>
+      <h2>Lupa Password</h2>
+      <p class="muted">Masukkan email Anda. Instruksi pemulihan akan ditampilkan sebagai simulasi.</p>
+      <label for="forgotEmail">Email</label>
+      <input id="forgotEmail" type="email" placeholder="nama@email.com" required>
+      <button id="forgotSubmit" class="btn btn-primary btn-full" type="button">Kirim Instruksi</button>
+    </form>
+  </dialog>
+
+  <dialog id="registerModal" class="modal">
+    <form method="dialog" class="modal-content">
+      <button class="modal-close" aria-label="Tutup">×</button>
+      <h2>Buat Akun</h2>
+      <p class="muted">Form pendaftaran simulasi untuk keperluan UTS.</p>
+      <label for="registerName">Nama lengkap</label>
+      <input id="registerName" type="text" placeholder="Nama Anda">
+      <label for="registerEmail">Email</label>
+      <input id="registerEmail" type="email" placeholder="nama@email.com">
+      <button id="registerSubmit" class="btn btn-primary btn-full" type="button">Daftar</button>
+    </form>
+  </dialog>
+</body>
+</html>

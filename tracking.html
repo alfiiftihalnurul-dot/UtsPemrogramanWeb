@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking Pengiriman | BookSpace</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-mark">B</span> BookSpace</a>
+      <p class="nav-label">MENU UTAMA</p>
+      <nav class="nav-menu">
+        <a class="nav-link" href="dashboard.html">▦ <span>Dashboard</span></a>
+        <a class="nav-link" href="stok.html">▤ <span>Stok / Katalog</span></a>
+        <a class="nav-link" href="checkout.html">＋ <span>Pemesanan</span></a>
+        <a class="nav-link active" href="tracking.html">⌖ <span>Tracking Pengiriman</span></a>
+      </nav>
+      <p class="nav-label nav-label-bottom">RIWAYAT</p>
+      <a class="nav-link" href="checkout.html#orderHistory">◷ <span>Laporan & Transaksi</span></a>
+      <a class="nav-link" href="login.html">↪ <span>Keluar</span></a>
+      <div class="sidebar-note"><strong>BookSpace</strong><p>Pantau perjalanan paket Anda.</p></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">BOOKSPACE / DELIVERY</p><h1>Tracking Pengiriman</h1></div><a class="btn btn-outline" href="dashboard.html">← Dashboard</a></header>
+      <section class="tracking-hero"><p class="eyebrow light">LACAK PESANAN ANDA</p><h2>Di mana paket buku Anda?</h2><p>Masukkan nomor Delivery Order untuk melihat informasi pengiriman.</p>
+        <form id="trackingForm" class="tracking-search"><input id="doNumber" placeholder="Contoh: DO20261104001" required><button class="btn btn-primary" type="submit">Cari Pesanan</button></form>
+      </section>
+      <section id="trackingResult" class="panel tracking-result hidden"></section>
+      <p class="demo-hint">Nomor DO contoh: DO20261104001</p>
+    </main>
+  </div>
+</body>
+</html>
